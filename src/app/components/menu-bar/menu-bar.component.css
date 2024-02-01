@@ -5,6 +5,7 @@
 }
 
 .container_menu-bar ul li{
+    font-size: 20px;
     margin-right: 20px;
     list-style: none;
 }
