@@ -8,24 +8,11 @@ import {dataFake} from '../../data/dataFake'
 })
 export class HomeComponent implements OnInit {
 
-  id:string[]=["1","2","3","4"]
-  title:string[]=[]
-  photoCover:string[]=[]
-  description:string[]=[]
-
+  prod = [] = dataFake
+  
   constructor() { }
 
   ngOnInit(): void {
-    this.setValues()
-  }
-
-  setValues(){
-    for(let i = 0;i<dataFake.length;i++) {
-      const result = dataFake.filter(article => article.id == this.id[i])[0]
-      this.title[i] = result.title
-      this.photoCover[i] = result.photo
-      this.description[i] = result.description
-    }
   }
 
 }

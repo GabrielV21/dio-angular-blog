@@ -3,28 +3,18 @@
 <div class="container_articles">
   <div class="articles-main">
     <app-big-card
-      Id={{id[0]}}
-      photoCover="{{photoCover[0]}}"
-      cardTitle="{{title[0]}}"
-      cardDescription="{{description[0]}}"
+      [Id]=prod[0].id
+      [photoCover]="prod[0].photo"
+      [cardTitle]="prod[0].title"
+      [cardDescription]="prod[0].description"
     ></app-big-card>
   </div>
 
-  <div class="articles-others">
-    <app-small-card
-      Id={{id[1]}}
-      cardTitle="{{title[1]}}"
-      photoCover="{{photoCover[1]}}"
-    ></app-small-card>
-    <app-small-card
-      Id={{id[2]}}
-      cardTitle="{{title[2]}}"
-      photoCover="{{photoCover[2]}}"
-    ></app-small-card>
-    <app-small-card
-      Id={{id[3]}}
-      cardTitle="{{title[3]}}"
-      photoCover="{{photoCover[3]}}"
+  <div class="articles-others" >
+    <app-small-card *ngFor="let item of prod"
+      [Id]=item.id
+      [cardTitle]="item.title"
+      [photoCover]="item.photo"
     ></app-small-card>
   </div>
 </div>
